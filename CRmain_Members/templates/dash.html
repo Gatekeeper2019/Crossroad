@@ -1,0 +1,76 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+
+
+<div class="container">
+  <h1> Dashboard</h1>
+
+  <div class="row">
+  <div class="col-sm-6">
+    <div class="cards hadow p-3 mb-5 bg-white rounded Regular shadow">
+      <div class="card-body">
+        <h5 class="card-title"><img class="shadow   rounded Regular shadow"src="{% static '/image/subash.jpg'%}" alt="CR" height="110" width="150" > &nbsp; <strong>Pastor’s Dashboard</strong></h5>
+        
+        <a href="{% url 'pastordash' %}" class="btn btn-info">Enter</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card shadow p-3 mb-5 bg-white rounded Regular shadow">
+      <div class="card-body">
+        <h5 class="card-title"><img class="shadow   rounded Regular shadow"src="{% static '/image/life.jpg'%}" alt="CR" height="110" width="150" > &nbsp; <strong>Life group </strong></h5>
+        
+        <a href="#" class="btn btn-success">Enter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card shadow p-3 mb-5 bg-white rounded Regular shadow">
+      <div class="card-body">
+        <h5 class="card-title"><img class="shadow   rounded Regular shadow"src="{% static '/image/worship.png'%}" alt="CR" height="110" width="150" > &nbsp;<strong>Worship Team </strong></h5>
+    
+        <a href="#" class="btn btn-dark">Enter</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card shadow p-3 mb-5 bg-white rounded Regular shadow">
+      <div class="card-body">
+        <h5 class="card-title"> <strong> <img class="shadow   rounded Regular shadow"src="{% static '/image/vds3.jpg'%}" alt="CR" height="110" width="150" > &nbsp;Sunday school / Teens  </strong> </h5>
+        
+        <a href="#" class="btn btn-danger">Enter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="row">
+  <div class="col-sm-6">
+    <div class="card shadow p-3 mb-5 bg-white rounded Regular shadow">
+      <div class="card-body">
+        <h5 class="card-title"><img class="shadow   rounded Regular shadow"src="{% static '/image/youturn.jpg'%}" alt="CR" height="110" width="150"> &nbsp;<strong>YouTurn </strong></h5>
+        
+        <a href="#" class="btn btn-warning">Enter</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card shadow p-3 mb-5 bg-white rounded Regular shadow">
+      <div class="card-body">
+        <h5 class="card-title"><img class="shadow   rounded Regular shadow"src="{% static '/image/cplant.png'%}" alt="CR" height="110" width="150"  > &nbsp;<strong>CR Churches </strong></h5>
+        
+        <a href="#" class="btn btn-secondary">Enter</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+</div>
+
+
+{% endblock%}

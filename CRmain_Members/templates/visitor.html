@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+
+<div class="container">
+ <div class="jumbotron ">
+  <div class="col-md">
+    <div class="card card-body">
+      <h5>Contact Information</h5>
+      <hr>
+      <p ><strong>First Name:</strong>  
+        <font face="verdana"  color="blue">{{visitors.first_name}}</font></p>
+      <p><strong>Last Name:</strong> 
+        <font face="verdana"  color="blue">{{visitors.last_name}}</font></p>
+      <p><strong>Email:</strong> 
+        <font face="verdana"  color="blue">{{visitors.email}}</font></p>
+      <p><strong>Phone:</strong>
+        <font face="verdana" color="blue">{{visitors.phone}}</font></p>
+      <p><strong>Place: </strong>
+        <font face="verdana"  color="blue">{{visitors.district}}</font></p>
+      <p><strong>Choices:</strong> 
+        <font face="verdana"  color="blue">{{visitors.choices}}</font></p>
+      <div class="container">
+        <a class=" btn btn-secondary " href="{% url 'newvisitors' %}" %}>back</a>
+
+      </div>
+      
+    </div>
+  </div>
+
+</div></div>
+
+
+    <!--<div class="col-sm">
+      <div class="container"> {% if profiles.profile_pic %}
+
+        <center><img src="{{ profiles.profile_pic.url }}" alt="{{ profiles.title }}" height="200"  width="180" ></center>
+        {% else %}
+        <span class="text-muted"> Not Available</span>
+        {% endif %}
+
+
+    </div>
+  </div> -->
+ 
+
+
+
+{% endblock%}

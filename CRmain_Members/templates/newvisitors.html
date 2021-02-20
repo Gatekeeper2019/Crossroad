@@ -1,0 +1,95 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{% block content%}
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+<div class="container-fluid">
+  <div class="row">
+  	<div class="col-md-12">
+  		<h1>First Time Visitors  </h1>
+  		<hr>
+
+  	</div>
+
+</div>
+
+<div class="container-fluid">
+ <div class="container-fluid">
+
+
+      <form method="get">
+
+        {{myFilter.form}}
+        {{ form.media }}
+
+        <button class="btn btn-info" type="submit">Search</button>
+
+
+  </div>
+  <br>
+
+      <table id="example" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <div class="row">
+
+
+</div>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Date Visited</th>
+          <th>Choices</th>
+          <th>Action</th>
+        </tr>
+
+        {% for newvisitor in visitors %}
+          <tr>
+
+            <td>{{newvisitor.first_name}}</td>
+            <td>{{newvisitor.last_name}}</td>
+            <td>{{newvisitor.date_visited}}</td>
+            <td>{{newvisitor.choices}}</td>
+            <td><a class="btn btn-sm btn-info" href="/visitor/{{ newvisitor.id }}">View</a>
+
+<!-- Large modal -->
+
+<!-- <td><a class="btn btn-sm btn-info" href="/modal-dialog modal-lg/{{ newvisitor.id }}" data-toggle="modal" data-target=".cd-example-modal-lg">View</a>
+
+
+<div class="modal fade cd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+ <div class="container">
+  <div class="col-md">
+    <div class="card card-body">
+      <h5>Contact Information</h5>
+      <hr>
+      <p>First Name: {{visitors.first_name}}</p>
+      <p>Last Name: {{visitors.last_name}}</p>
+      <p>Email: {{visitors.email}}</p>
+      <p>Phone: {{visitors.phone}}</p>
+      <p>Place: {{visitors.district}}</p>
+      <p>Choices: {{visitors.choices}}</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+            </td> -->
+          </tr>
+        {% endfor %}
+
+      </table>
+    </div>
+
+{% endblock%}

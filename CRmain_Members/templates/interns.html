@@ -1,0 +1,96 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+
+<div class="container">
+ <div class="jumbotron ">
+  <div class="col-md">
+    <div class="card card-body">
+      <h5>Bio</h5>
+      <hr>
+      <div class="col-md">
+      <div class="container"> 
+
+
+    </div>
+  </div>
+<div class="row">
+ <div class="col-sm">{% if interns.image %}
+
+        <center><img class=" img-fluid  rounded Regular shadow"s src="{{ churches.image.url }}" alt="{{ churches.Planter }}" height="350"  width="500" ></center>
+        {% else %}
+        <span class="text-muted"> Not Available</span>
+        {% endif %}</div>
+  <div class="col-sm"> 
+    <p><strong>Status:</strong>{{interns.status}}</p>
+    <p><strong>Start Date:</strong>{{interns.start_date}}</p>
+      <p><strong>End Date:</strong>{{interns.end_date}}</p>
+      <p><strong>First Name:</strong> {{interns.first_name}}</p>
+      <p><strong>Last Name:</strong> {{interns.last_name}}</p>
+      <p><strong>Country:</strong> {{interns.country_of_Citizenship}}</p>
+      <p><strong>State:</strong> {{interns.state}}</p>
+      <p><strong>District:</strong> {{interns.district}}</p>
+      <p><strong>Pin:</strong> {{interns.pin_code}}</p>
+      <p><strong>Marital Status:</strong> {{interns.Marital_Status}}</p>
+      <p><strong>Name of the Spouse:</strong> {{interns.Name_of_Spouse}}</p>
+      <p><strong>Years of Marriage:</strong> {{interns.Years_of_Marriage}}</p>
+      <p><strong>IS Spose Christian:</strong> {{interns.Is_Spouse_Christian}}</p>
+      <p><strong>General Physical Health:</strong> {{interns.General_Physical_Health}}</p>
+      <p><strong>If Poor Please explain:</strong> {{interns.If_Poor_please_explain}}</p>
+    
+
+    </div>
+  <!--<div class="col-sm"> <p><strong>Summary:</strong><br>
+      {{churches.Summary}}</p> </div> -->
+</div>
+
+  <div class="col-sm">
+     
+     <p><strong>Education Qualification Training :</strong> {{interns.education_qualification_training}}</p>
+      <p><strong>Theological Qualification:</strong> {{interns.theological_qualification}}</p>
+      <p><strong>Name Of The College Seminary:</strong> {{interns.Name_of_the_college_Seminary}}</p>
+      <p><strong>Place:</strong> {{interns.Place}}</p>
+      <p><strong>Year of Graduation:</strong> {{interns.year_of_graduation}}</p>
+      <p><strong>Are you already engaged in any other training program:</strong> {{interns.are_you_already_engaged_in_any_other_training_program}}</p>
+      <p><strong>If yes please explain:</strong> {{interns.If_yes_please_explain}}</p>
+      <p><strong>Are you involved in any church and or ministry activity:</strong> {{interns.are_you_involved_in_any_church_and_or_ministry_activity}}</p>
+      <p><strong>If yes please explain:</strong> {{interns.If_yes_please_explain}}</p>
+      <p><strong>Are you ordained or licensed pastor:</strong> {{interns.are_you_ordained_or_licensed_pastor}}</p>
+      <p><strong>By whom:</strong> {{interns.by_whom}}</p>
+      <p><strong>Church or Denominational Membership:</strong> {{interns.Church_or_Denominational_Membership}}</p>
+      <p><strong>Name of the church:</strong> {{interns.Name_of_the_church}}</p>
+      <p><strong>Head of your denomination Mentor name}:</strong> {{interns.Head_of_your_denomination_Mentor_name}}</p>
+      <p><strong>Were would you like to plant a church and why:</strong> {{interns.were_would_you_like_to_plant_a_church_and_why}}</p>
+      <p><strong>Briefly describe your Salvation experience:</strong> {{interns.Briefly_describe_your_Salvation_experience}}</p>
+      <p><strong>Mention the languages you speak,reada and Write:</strong> {{interns.Mention_the_languages_you_speak_Read_Write}}</p>
+      
+      </div>
+<br>
+      <div class="container">
+        <a class=" btn btn-warning " href="{% url 'newintern' %}" %}>back</a>
+
+      </div>
+      
+    </div>
+  </div>
+
+</div></div>
+
+
+    <!--<div class="col-sm">
+      <div class="container"> {% if profiles.profile_pic %}
+
+        <center><img src="{{ profiles.profile_pic.url }}" alt="{{ profiles.title }}" height="200"  width="180" ></center>
+        {% else %}
+        <span class="text-muted"> Not Available</span>
+        {% endif %}
+
+
+    </div>
+  </div> -->
+ 
+
+
+
+{% endblock%}

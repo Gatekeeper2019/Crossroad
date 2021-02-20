@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+
+<div class="container">
+ <div class="jumbotron ">
+  <div class="col-md">
+    <div class="card card-body">
+      <h5>Bio</h5>
+      <hr>
+      <div class="col-md">
+      <div class="container"> 
+
+
+    </div>
+  </div>
+<div class="row">
+ <div class="col-sm">{% if churches.image %}
+
+        <center><img class=" img-fluid  rounded Regular shadow"s src="{{ churches.image.url }}" alt="{{ churches.Planter }}" height="350"  width="500" ></center>
+        {% else %}
+        <span class="text-muted"> Not Available</span>
+        {% endif %}</div>
+  <div class="col-sm"> <p><strong>Name:</strong>{{churches.Planter}}</p>
+      <p><strong>Country:</strong>{{churches.country}}</p>
+      <p><strong>City:</strong> {{churches.city}}</p>
+      <p><strong>Email:</strong> {{churches.email}}</p>
+      <p><strong>Phone:</strong> {{churches.phone}}</p></div>
+  <div class="col-sm"> <p><strong>Summary:</strong><br>
+      {{churches.Summary}}</p> </div>
+</div>
+
+  <div class="col-sm">
+     
+      
+      </div>
+<br>
+      <div class="container">
+        <a class=" btn btn-warning " href="{% url 'churchplant' %}" %}>back</a>
+
+      </div>
+      
+    </div>
+  </div>
+
+</div></div>
+
+
+    <!--<div class="col-sm">
+      <div class="container"> {% if profiles.profile_pic %}
+
+        <center><img src="{{ profiles.profile_pic.url }}" alt="{{ profiles.title }}" height="200"  width="180" ></center>
+        {% else %}
+        <span class="text-muted"> Not Available</span>
+        {% endif %}
+
+
+    </div>
+  </div> -->
+ 
+
+
+
+{% endblock%}

@@ -1,0 +1,162 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+
+
+  <div class="container">
+    <h1>Pastor's Dashboard</h1>
+<br>
+
+  <div class="row">
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow  bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-behance content-center">
+        <h5 > <font size="5" color="white"><strong>Church Members</strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+
+          <div class="text-value-xl">{{covenant_members}}</div>
+          <div class="text-normal text-muted small">Covenant Members</div>
+        </div>
+        <div class="vr"></div>
+        <div class="col">
+          <div class="text-value-xl">{{regular_visitor}}</div>
+          <div class="text-normal text-muted small">Regular Visitors</div>
+
+        </div>
+        <div class="col">
+          <div class="text-value-xl">{{left}}</div>
+          <div class="text-normal text-muted small">Left</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow   bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-dribbble content-center">
+         <h5 > <font size="5" color="white"><strong>New Visitors</strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="text-value-xl">{{new_visitor}}</div>
+          <div class="text-lowercase text-muted small"><a href="{% url 'newvisitors' %}">Click for details</a> </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow   bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-facebook content-center">
+         <h5 > <font size="5" color="white"><strong>Church Plant</strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="text-value-xl">{{planting}}</div>
+          <div class="text-lowercase text-muted small"><a href="{% url 'churchplant' %}">Click for details</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow   bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-github content-center">
+      <h5 > <font size="5" color="white"><strong>Interns</strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="text-value-xl">{{interns}}</div>
+          <div class="text-lowercase text-muted small">Click for details</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow   bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-xing content-center">
+        <h5 > <font size="5" color="white"><strong>Member Care Visits </strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="text-value-xl">50</div>
+          <div class="text-lowercase text-muted small">Click for details</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow   bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-yahoo content-center">
+        <h5 > <font size="5" color="white"><strong>WoW</strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="text-value-xl">Click for details</div>
+          <div class="text-uppercase text-muted small"> </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow   bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-pinterest content-center">
+        <h5 > <font size="5" color="white"><strong>Life Group</strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="text-value-xl">8</div>
+          <div class="text-lowercase text-muted small">Click for details</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow   bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-vimeo content-center">
+       <h5 > <font size="5" color="white"><strong>SSJ</strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="text-value-xl">89k</div>
+          <div class="text-uppercase text-muted small">friends</div>
+        </div>
+        <div class="vr"></div>
+        <div class="col">
+          <div class="text-value-xl">459</div>
+          <div class="text-uppercase text-muted small">feeds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-lg-4">
+    <div class="card shadow   bg-white rounded Regular shadow" style="max-width: 18rem;">
+      <div class="card-header bg-tumblr content-center">
+       <h5 > <font size="5" color="white"><strong>You Turn</strong></font></h5>
+      </div>
+      <div class="card-body row text-center">
+        <div class="col">
+          <div class="text-value-xl">89k</div>
+          <div class="text-uppercase text-muted small">friends</div>
+        </div>
+        <div class="vr"></div>
+        <div class="col">
+          <div class="text-value-xl">459</div>
+          <div class="text-uppercase text-muted small">feeds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+{% endblock%}
